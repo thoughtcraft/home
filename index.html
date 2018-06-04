@@ -1,108 +1,163 @@
-<!doctype html>
-
-<html lang="en">
 <head>
     <title>Thoughtcraft</title>
-    
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    
+    <meta charset="UTF-8" /> 
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/colors.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Anton|Roboto+Slab:400,700|Raleway:400,700,900" rel="stylesheet">  
 </head>
+
 <body>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>   
-    <script src="assets/js/index.js"></script>
-    
-    <div id="header" class="fixedHeader">
+    <!-- Header  -->
+    <div id="headerWrapper" class="headerWrapper">
         
-        <div class="flexIcon">
-            <div class="iconImage"></div>
-            <div class="iconText">THOUGHTCRAFT</div>
+        <div class="listWrapper">
+            
+            <h class="logo">THOUGHTCRAFT ALPHA</h>
+
+            <ul class="headerList">
+                <li>Home</li>
+                <li>News</li>
+                <li>Tools</li>
+                <li>Thoughts</li>
+                <li>Streams</li>
+            </ul>
         </div>
-        <div class="flexItem">Tools</div>
-        <div class="flexItem">Thoughts</div>
+
+        <div class="headerDescWrapper">
+            <h class="headerDesc">Tools and Thoughts for</h>
+            <img src="assets/warcraft.png" class="headerDescLogo">
+        </div>
+        
+        
     </div>
     
-    <div id="banner" class="banner">
-        <div class="b1 textShadow">THOUGHTCRAFT</div><br>
-        <div class="b2 textShadow"><span style="color: #87fdfe">Thoughts</span> & <span style="color: #1c89c0">tools</span> for</div><br>
-        <div class="bannerWC"></div>
+    <!-- News Wrapper -->
+    <div class="newsWrapper">
+        <div class="sectionHeader">
+            <h1>Recent News</h1>
+            <p class="underline"></p>
+        </div>
+        <div class="newsCard n1">
+                <img src="assets/balanceDruid.png" class="cardImg"><img>
+                <h class="cardHeader">BFA Balance Changes</h>
+                <p class="cardDesc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis earum optio sed 
+                    repellendus iure placeat iste porro, hic velit asperiores quam ex, exercitationem ipsa, neque tenetur 
+                    perspiciatis et! Iusto dolorem nihil hic magnam illum deserunt possimus, nulla corrupti odio quas!</p>
+                <h class="cardFooter">May 18, 2018</h>
+        </div>
+
+        <div class="newsCard n2">
+            <img src="assets/change.png" class="cardImg"><img>
+            <h class="cardHeader">The Great Update</h>
+            <p class="cardDesc">With this big of an update, you might as well call this version 2.0 of the website. 
+                Even though I am quite happy with the state of the tools developed (mostly) for Antorus, 
+                I'd also like to add a section dedicated to random opinions on certain aspects of the game. </p>
+            <h class="cardFooter">May 14, 2018</h>
+        </div>
+
+        <div class="newsCard n3">
+                <img src="assets/tomb.png" class="cardImg"><img>
+                <h class="cardHeader">RIP Tomb of Sargeras</h>
+                <p class="cardDesc">At this point, the Tomb of Sargeras tools will not be added, 
+                    since the raid is already fairly outdated. I feel like the effort that would have to be put into 
+                    making another set of BiS lists for 36 specs, simply wouldn't be worth the time investment.</p>
+                <h class="cardFooter">January 5, 2018</h>
+        </div>
+        <div class="newsCard n4">
+                <img src="assets/stock2.jpg" class="cardImg"><img>
+                <h class="cardHeader">Lorem ipsum dolor sit amet.</h>
+                <p class="cardDesc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis earum optio sed 
+                    repellendus iure placeat iste porro, hic velit asperiores quam ex, exercitationem ipsa, neque tenetur 
+                    perspiciatis et! Iusto dolorem nihil hic magnam illum deserunt possimus, nulla corrupti odio quas!</p>
+                <h class="cardFooter">Lorem, ipsum dolor.</h>
+        </div>
+        
     </div>
-    <div id="news" class="newsWrapper">
-        
-        <div class="newsTitle">
-            <h1>NEWS</h1><hr>
+
+    <!-- Tools Wrapper -->
+    <div class="toolsWrapper">
+
+        <div class="sectionHeader">
+            <h1>Tools</h1>
+            <p class="underline"></p>
         </div>
-        
-        <div class="newsCard">          
-            <div class="newsImage"></div>           
-            <div class="newsCardBody">               
-                <div class="newsCardTitle">THE GREAT UPDATE</div>          
-                <div class="newsText">
-                    <p>
-                    With this big of an update, you might as well call this version 2.0 of the website. Even though I am quite happy with the state of the
-                    tools developed for Antorus (mostly), I'd also like to add a section dedicated to random opinions on certain aspects of the game.
-                    </p>            
-                </div>
-                <div class="newsCardFooter">14 January 2018</div>
-            </div>                      
+
+        <div class="tool t1">
+            <img src="assets/icons/clipboard.svg" class="toolIcon"></img>
+            <h class="toolHeader th2">BiS Lists</h>
+            <p class="toolKey">What's my best gear?</p>
+            <p class="toolDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, veniam deleniti. 
+                Accusamus officia temporibus modi culpa aut odio facilis earum!
+            </p>
+            <div class="toolButton">Coming Soon!</div>
         </div>
-        
-        <div class="newsCard">          
-            <div class="newsImage" style="background: url('assets/img/tomb.png');background-repeat: no-repeat;background-size: 100% 100%;min-height: 250px"></div>           
-            <div class="newsCardBody">
-                
-                <div class="newsCardTitle">RIP ToS</div>          
-                <div class="newsText">
-                    <p>
-                    At this point, the Tomb of Sargeras tools will not be added, since the raid is already fairly outdated. I feel like the effort
-                    that would have to be put into making another set of BiS lists for 36 specs, simply wouldn't be worth the time investment.
-                    </p>               
-                </div>
-                <div class="newsCardFooter">5 January 2018</div>
-            </div>                      
+
+        <div class="tool t2">
+            <img src="assets/icons/archive.svg" class="toolIcon"></img>
+            <h class="toolHeader th2">Boss Strats</h>
+            <p class="toolKey">How to kill raid bosses</p>
+            <p class="toolDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, veniam deleniti. 
+                Accusamus officia temporibus modi culpa aut odio facilis earum!
+            </p>
+            <a href="bossStrats.html" class="toolButton">Go</a>
         </div>
-        
+
+        <div class="tool t3">
+            <img src="assets/icons/git-pull-request.svg" class="toolIcon"></img>
+            <h class="toolHeader th2">Dungeon Compendium</h>
+            <p class="toolKey">How to complete dungeons</p>
+            <p class="toolDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, veniam deleniti. 
+                Accusamus officia temporibus modi culpa aut odio facilis earum!
+            </p>
+            <div class="toolButton">Coming Soon!</div>
+        </div>        
+
+        <div class="tool t4">
+            <img src="assets/icons/users.svg" class="toolIcon"></img>
+            <h class="toolHeader th2">Loot Council</h>
+            <p class="toolKey">Where should the gear go?</p>
+            <p class="toolDesc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, veniam deleniti. 
+                Accusamus officia temporibus modi culpa aut odio facilis earum!
+            </p>
+            <div class="toolButton">Coming Soon!</div>
+        </div>
     </div>
-    <div id="ttWrapper" class="ttWrapper">
-        
-        <div id="line1" class="ttLine">
-        
-            <div id="toolsWrapper" class="tWrapper" style="margin-right: 5%">
-                <div class="b3">Tools</div>
-                <div class="ttImage" style="background: url('assets/img/tools.jpg');background-repeat: no-repeat;background-size: cover;"></div>
-                <div id="toolsButton"class="ttButton">Expand</div>         
-            </div>
-                    
-            <div id="thoughtsWrapper" class="tWrapper" style="margin-left: 5%">
-                <div class="b3">Thoughts</div>
-                <div class="ttImage" style="background: url('assets/img/thoughts.jpg');background-repeat: no-repeat;background-size: cover;"></div>
-                <div id="thoughtsButton" class="ttButton">Expand</div>
-            </div>
-        
+
+    <!-- Thoughts/Streams wrapper -->
+    
+    <div class="thoughtsWrapper">
+
+        <div class="thoughtsDesc">
+            <h1>Thoughts on anything WoW related</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, autem minima. 
+                Molestiae totam assumenda labore exercitationem adipisci eligendi nesciunt itaque. 
+                Vel dolor distinctio ipsam officiis aperiam pariatur ut harum nihil.
+            </p>
+            <div class="thoughtsButton">Go</div>
         </div>
-        
-        <div id="line2" class="ttLine">
-            
-            <div id="abtToolSelect" class="toolButton">
-                <img src="assets/img/antorus.png" class="toolImage"></img>
-                <div class="toolText"> Antorus Assistant </div>           
+        <div class="thoughtsImgWrapper">
+            <img src="assets/icons/crosshair.svg" class="thoughtsIcon i1"></img>
+            <img src="assets/icons/codepen.svg" class="thoughtsIcon i2"></img>
+            <img src="assets/icons/edit.svg" class="thoughtsIcon i3"></img>
+
+            <div class="iconHeader k1">
+                <h1 class="iH">Gameplay</h1>
+                <p class="underlineI c1"></p>
             </div>
-                
-            <div class="toolButton">
-                <img src="assets/img/dungeons.png" class="toolImage"></img>
-                <div class="toolText"> Dungeon Compendium </div>           
+
+            <div class="iconHeader k2">
+                <h1 class="iH">Game Design</h1>
+                <p class="underlineI c2"></p>
             </div>
-            
-            
+
+            <div class="iconHeader k3">
+                <h1 class="iH">Lore</h1>
+                <p class="underlineI c3"></p>
+            </div>
+
         </div>
-        
-        
-            
     </div>
     
-    <div id="content"></div>
     
-    <div id="footer" class="footer"></div>
+    
 </body>
-</html>

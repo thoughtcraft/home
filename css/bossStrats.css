@@ -1,0 +1,411 @@
+:root{
+    --baseWidth: 72px;
+}
+
+body{
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    width:100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    background: var(--c1);
+    display: grid;
+    grid-template-columns: 1.2fr 8.8fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sidebar abtMain";
+    overflow: hidden;
+}
+
+p{
+    color: var(--h1);
+    font-family: Oswald;
+    text-align: justify;
+    font-size: 18px;
+}
+
+a{
+    color: var(--hi1);
+}
+
+.sideA{
+    text-decoration: none;
+    color: var(--h1);
+}
+
+/* shared sidebar */
+
+.sidebar{
+    grid-area: sidebar;
+    background: var(--c0);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+}
+
+.sidebarHeader{
+    margin: 10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    flex-grow: 2;
+}
+
+.sidebarFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h1{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+
+h2,h3,h4,.sideA{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 300;
+    font-size: 1.1vw;
+    border-top: solid 1px var(--hi1);
+    text-transform: uppercase;
+    padding: 0 0 10% 0;
+    margin: 0;
+    width: 100%;
+}
+
+h3{
+    font-size: .8vw;
+    margin-left: 10px;
+    border: none;
+    width: auto;
+}
+
+h4{
+    border: none;
+    font-size: .6vw;
+    color: var(--t1);
+}
+
+.sideA:hover{
+    color: var(--hi1);
+}
+
+.logo{
+    width: 50%;
+}
+
+/* ABT WRAPPER */
+
+.abtWrapper{
+    grid-area: abtMain;
+    display: grid; /*Change this for debug*/
+    justify-items: center;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: .1fr .3fr .3fr .3fr;
+    grid-template-areas: 
+    "h h h h h"
+    "bc1 bc2 bc3 bc4 bc5"
+    "bc6 bc7 bc8 bc9 bc10"
+    ". . bc11 . .";
+    grid-gap: 2%;
+    padding: 3%;
+
+    max-height: 100%;
+
+    background-image: url("../assets/back_bs.png");
+    background-size: cover;
+}
+
+.abtHeader{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 800;
+    font-size: 26px;
+    grid-area: h;
+    padding: 5px 40px;
+    background-color: var(--c0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0; 
+    border-radius: 20px;
+    text-transform: uppercase;
+    align-self: start;
+    max-height: 100%;
+}
+
+.bossCard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 1fr;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
+    /* background-color: var(--c0); */
+    width: 90%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: end;
+}
+
+.bossCard:hover{
+    background-color: rgba(255,255,255,.3);
+    
+}
+
+.bossCard:hover > .portraitFooter{
+    color: var(--hi1);
+    border: solid 2px var(--hi1);
+}
+
+.portrait{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+.portraitFooter{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 300;
+    font-size: 18px;
+    background-color: var(--c1);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;    
+    border: solid 2px  rgba(255,255,255,.8);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;   
+}
+
+.bc1{grid-area: bc1;}
+.bc2{grid-area: bc2;}
+.bc3{grid-area: bc3;}
+.bc4{grid-area: bc4;}
+.bc5{grid-area: bc5;}
+.bc6{grid-area: bc6;}
+.bc7{grid-area: bc7;}
+.bc8{grid-area: bc8;}
+.bc9{grid-area: bc9;}
+.bc10{grid-area: bc10;}
+.bc11{grid-area: bc11;}
+
+.p1{background-image: url("../assets/portraits/garothi_p.png");}
+.p2{background-image: url("../assets/portraits/felhounds_p.png");}
+.p3{background-image: url("../assets/portraits/highcommand_p.png");}
+.p4{background-image: url("../assets/portraits/portalkeeper_p.png");}
+.p5{background-image: url("../assets/portraits/eonar_p.png");}
+.p6{background-image: url("../assets/portraits/imonar_p.png");}
+.p7{background-image: url("../assets/portraits/kingaroth_p.png");}
+.p8{background-image: url("../assets/portraits/varimathras_p.png");}
+.p9{background-image: url("../assets/portraits/coven_p.png");}
+.p10{background-image: url("../assets/portraits/agg_p.png");}
+.p11{background-image: url("../assets/portraits/argus_p.png");}
+
+/* DESCRIPTION */
+/* Individual boss wrapper for description */
+
+.bossDescWrapper{
+    max-height: 100%;
+    grid-area: abtMain;
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7fr .5fr 2fr .5fr;
+    grid-template-areas: 
+    "bossPic"
+    "bossHeader"
+    "bossDesc"
+    "bossReturn";
+    background-image: url("../assets/back_bs.png");
+    background-size: cover;
+    margin: 0;
+    padding: 5%;
+    grid-gap: 0;
+    justify-items: center;
+}
+
+.dR{
+    grid-area: bossReturn;
+    background-color: var(--c0);
+    padding: 2px 2px;
+    margin-right: 1%;
+    border-radius: 20%;
+    height: 42px;
+}
+
+.bossPortrait{
+    grid-area: bossPic;   
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.bossHeader{
+    grid-area: bossHeader;
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 800;
+    font-size: 26px;
+    background-color: var(--c0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 5px 5%; 
+    border-radius: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.bossDesc{
+    grid-area: bossDesc;
+    align-self: start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(0, 0, 0, .3);
+    padding: 10px;
+}
+
+/* Boss strats */
+
+.mh{
+    font-size: 24px;
+    font-family: Oswald;
+    color: var(--h1);
+    font-weight: 900;
+    border-bottom: solid 1px rgba(255,255,255,.3); 
+}
+
+.border{
+    border-radius: 10px;
+    border: none;
+    padding: 0 4%;
+    background-color: var(--c0);
+}
+
+.mechanicsHeaderWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mIcon{
+    background-color: var(--c0);
+    height: 50%;
+    padding: 2px 2px;
+    margin-right: 1%;
+    border-radius: 20%;
+}
+
+.mGap{
+    flex-grow: 2;
+}
+
+.mDesc{
+    font-size: 18px;
+    justify-self: end;
+    color: var(--h1);
+    border: none;
+}
+
+.mIcon:hover,.mDesc:hover,.dR:hover{
+    background-color: var(--c2);
+}
+
+.mechanicsTabWrapper{
+    grid-area: abtMain;
+    display: none;
+    grid-template-rows: .1fr .9fr;
+    grid-template-columns: 1fr;
+    max-height: 100%;
+    padding: 5%;
+
+    min-height: 0;
+    min-width: 0;
+    
+    background-image: url("../assets/back_bs.png");
+    background-size: cover;
+}
+
+.mechanicsWrapper{
+    display: none;
+    text-align: justify;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: var(--c0);
+    max-height: 100%;
+    padding: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 0;
+    min-width: 0;
+}
+
+.icon{
+    background: url('../assets/icons/stratIcons.png');
+    background-size: cover;
+    display: inline-block;
+    width: var(--baseWidth);
+    height: 24px; 
+    vertical-align: middle;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 5px;
+}
+
+.move{
+    background-position: 0px 0px;
+}
+
+.debuff{
+    background-position: calc(var(--baseWidth)*(-1)) 0px;
+}
+
+.tank{
+    background-position: calc(var(--baseWidth)*(-2)) 0px;
+}
+
+.soak{
+    background-position: calc(var(--baseWidth)*(-3)) 0px;
+}
+
+.heal{
+    background-position: calc(var(--baseWidth)*(-4)) 0px;
+}
+
+.tankSwap{
+    background-position: calc(var(--baseWidth)*(-5)) 0px;
+    width: 96px;
+}
+
+
+.mechanicsWrapper::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+.mechanicsWrapper::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255,255,255,0.3); 
+    border-radius: 10px;
+}
+ 
+.mechanicsWrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(255,255,255,0.5); 
+}
