@@ -1,5 +1,6 @@
 var ids=["Garothi","Felhounds","HighCommand","Hasabel","Eonar","Imonar","Kingaroth","Varimathras","Coven","Aggramar","Argus"];
-var shortName=["Garothi","Felhounds","High Command","Hasabel","Eonar","Imonar","Kin'garoth","Varimathras","Coven","Aggramar","Argus"];
+var portraits=["garothi_r.png","felhounds_r.png","highcommand_r.png","portalkeeper_r.png","eonar_r.png","imonar_r.png","kingaroth_r.png",
+"varimathras_r.png","coven_r.png","agg_r.png","argus_r.png"];
 var fullName=["Garothi Worldbreaker","Felhounds of Sargeras","Antoran High Command","Portal Keeper Hasabel","Eonar the Life-Binder",
               "Imonar the Soulhunter","Kin'garoth","Varimathras","The Coven of Shivarra","Aggramar","Argus the Unmaker"];
 var prevClick=-1;
@@ -64,6 +65,12 @@ function returnToBossSelector(){
 
 function selectDesc(){
     $(".mechanicsTabWrapper").fadeOut(400);//Fade mechanics Tab
+    var url='url("assets/portraits/'+portraits[Number(id.slice(2))]+'")';
+
+    // var url='url("assets/portraits/agg_r.png")';
+    $(".bossPortrait").css('background-image', 'none');
+    $(".bossPortrait").css("background-image",url);
+    console.log(url);
     $(id).hide();
     $("#d"+Number(id.slice(2))).fadeIn(400);
     $("#d"+Number(id.slice(2))).css("display","grid");

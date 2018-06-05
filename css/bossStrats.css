@@ -229,59 +229,57 @@ h4{
 /* Individual boss wrapper for description */
 
 .bossDescWrapper{
-    max-height: 100%;
     grid-area: abtMain;
     display: none;
     grid-template-columns: 1fr;
-    grid-template-rows: 7fr .5fr 2fr .5fr;
-    grid-template-areas: 
-    "bossPic"
-    "bossHeader"
-    "bossDesc"
-    "bossReturn";
+    grid-template-rows: 60% 5% 30% 5%; 
     background-image: url("../assets/back_bs.png");
     background-size: cover;
     margin: 0;
+    align-items: center;
     padding: 5%;
-    grid-gap: 0;
-    justify-items: center;
 }
 
-.dR{
-    grid-area: bossReturn;
-    background-color: var(--c0);
-    padding: 2px 2px;
-    margin-right: 1%;
-    border-radius: 20%;
-    height: 42px;
-}
-
-.bossPortrait{
-    grid-area: bossPic;   
-    max-height: 100%;
-    max-width: 100%;
+.bossPortrait{ 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 .bossHeader{
-    grid-area: bossHeader;
     color: var(--h1);
     font-family: Oswald;
     font-weight: 800;
     font-size: 26px;
     background-color: var(--c0);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 5px 5%; 
+    padding: 0px 5%;
     border-radius: 20px;
     text-transform: uppercase;
     text-align: center;
+    justify-self: center;
+    min-width: 300px;
 }
 
 .bossDesc{
-    grid-area: bossDesc;
-    align-self: start;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgba(0, 0, 0, .3);
-    padding: 10px;
+    padding: 0 2%;
+    align-self: start;
+    margin: 2% 5%;
+    justify-self: center;
+}
+
+.dR{
+    background-color: var(--c0);
+    padding: 2px 2px;
+    margin-right: 1%;
+    border-radius: 20%;
+    height: 42px;
+    justify-self: center;
+    align-self: start;
 }
 
 /* Boss strats */
@@ -311,6 +309,7 @@ h4{
 .mIcon{
     background-color: var(--c0);
     height: 50%;
+    max-height: 48px;
     padding: 2px 2px;
     margin-right: 1%;
     border-radius: 20%;
