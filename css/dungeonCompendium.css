@@ -113,6 +113,9 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    background-image: url("../assets/back_dc.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .roleWrapper{
@@ -244,6 +247,10 @@ a:hover{
     color: var(--c1);
 }
 
+.tankB:hover{
+    background-color: var(--c5);
+}
+
 .roleContent:hover > .roleIcon{
     background-position-x: -384px;
 }
@@ -253,10 +260,6 @@ a:hover{
 .roleContent:hover > .healerI{
     background-position-x: -640px;
 }
-
-
-
-
 
 
 
