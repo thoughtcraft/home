@@ -177,8 +177,8 @@ function buildDungeonView() {
                 $("#keysView").append("<div id='k" + j.toString() + "' class='keyCard'" + 'onclick="window.open(&quot;https://www.youtube.com/watch?v=' + runs[role][i][1] + '&quot;,&quot;mywindow&quot;)"' + "></div>)");
                 $("#k" + j.toString()).append("<img class='videoThumbnail' src='https://img.youtube.com/vi/" + runs[role][i][1] + "/mqdefault.jpg'></img>");
             } else {
-                $("#keysView").append("<div id='k" + j.toString() + "' class='keyCard'" + 'onclick="window.open(&quot;http://player.twitch.tv/?video=v' + runs[role][i][1] + '&quot;,&quot;mywindow&quot;)"' + "></div>)");
-                $("#k" + j.toString()).append("<iframe class='videoThumbnail' src='http://player.twitch.tv/?video=v" + runs[role][i][1] + "&!autoplay' frameborder='0' allowfullscreen='true' autoplay='false'></iframe>");
+                $("#keysView").append("<div id='k" + j.toString() + "' class='keyCard'" + 'onclick="window.open(&quot;https://player.twitch.tv/?video=v' + runs[role][i][1] + '&quot;,&quot;mywindow&quot;)"' + "></div>)");
+                $("#k" + j.toString()).append("<iframe class='videoThumbnail' src='https://player.twitch.tv/?video=v" + runs[role][i][1] + "&!autoplay' frameborder='0' allowfullscreen='true' autoplay='false'></iframe>");
             }
 
 
