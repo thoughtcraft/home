@@ -293,6 +293,8 @@ a:hover{
     background-repeat: no-repeat;
     padding: 2%;
     grid-gap: 2.5%;
+    min-height: 0;
+    min-width: 0;
 }
 
 .dungeonCard{
@@ -306,6 +308,8 @@ a:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: color 1s;
     transition: box-shadow 1s;
+    min-height: 0;
+    min-width: 0;
 }
 
 .imgWrapper{
@@ -418,7 +422,8 @@ a:hover{
     text-transform: uppercase;
     text-align: center;
     justify-self: center;
-    min-width: 300px;
+    min-width: 400px;
+    max-width: 100%;
 }
 
 .keysWrapper{
