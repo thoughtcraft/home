@@ -7,9 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Anton|Roboto+Slab:400,700|Raleway:400,700,900|Oswald"
         rel="stylesheet">
 
-    <script type="text/javascript" src="js/tt.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/bossStrats.js"></script>
+    <script type="text/javascript" src="js/dungeonCompendium.js"></script>
 </head>
 
 <body>
@@ -21,12 +20,18 @@
         </div>
 
         <div class="sidebarMain">
-            <h2><a class="sideA" href="index.html">Home</a></h2>
+            <h2>
+                <a class="sideA" href="index.html">Home</a>
+            </h2>
             <h2>News</h2>
             <h2>Tools</h2>
             <h3>BiS Lists</h3>
-            <h3><a href="bossStrats.html">Boss Strats</a></h3>
-            <h3><a href="dungeonCompendium.html">Dungeon Compendium</a></h3>
+            <h3>
+                <a href="bossStrats.html">Boss Strats</a>
+            </h3>
+            <h3>
+                <a href="dungeonCompendium.html">Dungeon Compendium</a>
+            </h3>
             <h3>Loot Council</h3>
             <h2>Thoughts</h2>
             <h2>Streams</h2>
@@ -38,14 +43,14 @@
         </div>
     </div>
 
-    <div class="roleSelectorWrapper">
+    <div id="roleScreen" class="roleSelectorWrapper">
         <div class="roleWrapper">
             <div class="roleContent tankW">
                 <div class="roleIcon"></div>
                 <h class="roleHeader ts_tank">Tank</h>
-                <div  id="tankButton" class="goButton tankB">Go</div>
+                <div id="tankButton" class="goButton tankB">Go</div>
                 <div class="roleImg"></div>
-            </div>  
+            </div>
         </div>
 
         <div class="roleWrapper">
@@ -56,7 +61,7 @@
                 <div class="roleImg rI_dps"></div>
             </div>
         </div>
-        
+
         <div class="roleWrapper">
             <div class="roleContent healerW">
                 <div class="roleIcon healerI"></div>
@@ -64,6 +69,118 @@
                 <div id="healerButton" class="goButton healerB">Go</div>
                 <div class="roleImg rI_healer"></div>
             </div>
-            
+
         </div>
     </div>
+
+    <div id="dungeonScreen" class="dungeonSelectorWrapper">
+        <div id="arc" class="dungeonCard">
+            <img src="assets/dungeons/arc.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Arcway</h>
+            </div>
+        </div>
+
+        <div id="brh" class="dungeonCard">
+            <img src="assets/dungeons/brh.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Black Rook Hold</h>
+            </div>
+        </div>
+
+        <div id="coen" class="dungeonCard">
+            <img src="assets/dungeons/coen.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Cathedral of Eternal Night</h>
+            </div>
+        </div>
+
+        <div id="cos" class="dungeonCard">
+            <img src="assets/dungeons/cos.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Court of Stars</h>
+            </div>
+        </div>
+
+        <div id="dht" class="dungeonCard">
+            <img src="assets/dungeons/dht.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Darkheart Thicket</h>
+            </div>
+        </div>
+
+        <div id="eoa" class="dungeonCard">
+            <img src="assets/dungeons/eoa.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Eye of Azshara</h>
+            </div>
+        </div>
+
+        <div id="hov" class="dungeonCard">
+            <img src="assets/dungeons/hov.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Halls of Valor</h>
+            </div>
+        </div>
+
+        <div id="lkara" class="dungeonCard">
+            <img src="assets/dungeons/lkara.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Lower Karazhan</h>
+            </div>
+        </div>
+
+        <div id="mos" class="dungeonCard">
+            <img src="assets/dungeons/mos.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Maw of Souls</h>
+            </div>
+        </div>
+
+        <div id="nl" class="dungeonCard">
+            <img src="assets/dungeons/nl.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Neltharion's Lair</h>
+            </div>
+        </div>
+
+        <div id="sott" class="dungeonCard">
+            <img src="assets/dungeons/sott.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Seat of the Triumvirate</h>
+            </div>
+        </div>
+
+        <div id="ukara" class="dungeonCard">
+            <img src="assets/dungeons/ukara.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Upper Karazhan</h>
+            </div>
+        </div>
+
+        <div id="votw" class="dungeonCard">
+            <img src="assets/dungeons/votw.png" class="imgWrapper"></img>
+            <div class="cardContent">
+                <h class="dungeonHeader">Vault of the Wardens</h>
+            </div>
+        </div>
+
+        <div id="returnCard" class="returnCard">
+            <img src="assets/icons/rewind.svg" class="returnWrapper"></img>
+            <h class="dungeonHeader">Return</h>
+        </div>
+    </div>
+
+    <div id="keysMainWrapper" class="dungeonViewWrapper">
+
+        <div class="headerWrapper">
+            <img id="keysReturn" src="assets/icons/rewind.svg" class="mIcon"></img>
+            <div id="keysHeader" class="keyHeader"></div>
+        </div>
+
+        <div id="keysView" class="keysWrapper"></div>
+
+    </div>
+
+
+</body>
