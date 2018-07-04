@@ -46,6 +46,7 @@ var channels=[
 var categories=["ce","hm","casual","pvp","lore","critic","guides","news","twitch","yt"];
 var colors=["var(--g1)","var(--g1)","var(--g1)","var(--g1)","var(--hi1)","var(--hi1)","var(--hi1)","var(--hi1)","var(--p1)","var(--r1)"]
 var filters=[];
+var fadeSpeed=100;
 
 var twitch="https://www.twitch.tv/";
 var yt="https://www.youtube.com/";
@@ -109,7 +110,7 @@ function handleFilterClick(id){
         $("#"+id).css("background-color","");
     }
 
-    $("#fp").fadeOut(250,function(){
+    $("#fp").fadeOut(fadeSpeed,function(){
         //Update filter paragraph:
         if (filters.length==1){
             $("#fp").text("1 Category selected");
@@ -118,7 +119,7 @@ function handleFilterClick(id){
         }
     });
 
-    $("#fp").fadeIn(250);
+    $("#fp").fadeIn(fadeSpeed);
 }
 
 function clearFilters(){
@@ -130,11 +131,11 @@ function clearFilters(){
     }
     filters=[];
 
-    $("#fp").fadeOut(250,function(){
+    $("#fp").fadeOut(fadeSpeed,function(){
         //Clear filter paragraph:
         $("#fp").text("0 Categories selected");
     });   
-    $("#fp").fadeIn(250);
+    $("#fp").fadeIn(fadeSpeed);
    
     $("#mH").empty();
 }

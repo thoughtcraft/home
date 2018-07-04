@@ -435,12 +435,13 @@ a:hover{
 }
 
 .keyContent{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: auto;  
+    flex-grow: 1;
+    padding: 5% 0;
 }
 
 .keyCard{
@@ -453,7 +454,7 @@ a:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: color 1s;
     transition: box-shadow 1s;
-
+    height: auto;
     max-width: 210px;
     max-height: 300px;
 }
@@ -468,7 +469,7 @@ a:hover{
 .keyLine{
     color: var(--c1);
     font-family: Raleway;
-    font-size: 1.1vw;
+    font-size: 14px;
     font-weight: 700;
     text-align: center;
     padding: 2%;
