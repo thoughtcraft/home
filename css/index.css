@@ -49,10 +49,9 @@ h1{
 /* HEADER WRAPPER */
 
 .headerWrapper{
-    display: grid;
-    grid-gap: 1rem;
+    display: grid;  
     grid-template-columns: 1fr;
-    height: 65%;
+    height: 500px;
 }
 
 .listWrapper{
