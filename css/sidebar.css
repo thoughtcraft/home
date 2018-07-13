@@ -1,0 +1,149 @@
+/* shared sidebar */
+.sidebarButton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--c0);
+    padding: 5px 5px;
+    cursor: pointer;
+    z-index: 98;
+}
+
+.sidebarButton.sIcon{
+    position: relative;
+    display: block;
+    background: url("../assets/icons/align-justify.svg");
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+.sidebarButton.sText{
+    position: relative;
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+.sidebar{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -180px;
+    width: 180px;
+    height: 100%;
+    background: var(--c0);
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-shrink: 1; 
+    z-index: 99;
+}
+
+.sidebarClose{
+    margin: 4%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 2px var(--c1);
+    cursor: pointer;
+}
+
+.sidebarCloseText{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.sidebarCloseIcon{
+    background: url("../assets/icons/x-square.svg") no-repeat;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+
+.sidebarHeader{
+    margin: 10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    flex-grow: 2;
+    margin: 0 3%;
+}
+
+.sidebarFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 3%;
+}
+
+.s_h1{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.s_h2,.s_h3,.s_h4{
+    color: var(--h1);
+    font-family: Oswald;
+    font-weight: 300;
+    font-size: 18px;
+    border-top: solid 1px var(--hi1);
+    text-transform: uppercase;
+    padding: 0 0 10% 0;
+    margin: 0;
+    width: 100%;
+}
+
+.s_h3.un{
+    color: var(--c3);
+}
+
+.s_h3{
+    font-size: 12px;
+    margin-left: 10px;
+    border: none;
+    width: auto;
+}
+
+.s_h4{
+    border: none;
+    font-size: 10px;
+    color: var(--t1);
+}
+
+.s_a{
+    color: var(--h1);
+    text-decoration: none;
+}
+
+.s_a:hover{
+    color: var(--hi1);
+}
+
+.logo{
+    width: 50%;
+}

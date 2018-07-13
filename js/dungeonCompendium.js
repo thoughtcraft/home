@@ -124,6 +124,30 @@ function addButtonEvents() {
     $("#keysReturn").on("mousedown", function () {
         returnFromKeys();
     });
+
+    $(".sidebarButton").on("mousedown",function(){
+        showSidebar();
+    });
+    $(".sidebarClose").on("mousedown",function(){
+        hideSidebar();
+    });
+}
+
+function showSidebar(){
+    $(".sidebar").css("display","flex");
+    $(".roleSelectorWrapper").animate({"margin-left":"180px"},400);
+    $(".dungeonSelectorWrapper").animate({"margin-left":"180px"},400);
+    $(".dungeonViewWrapper").animate({"margin-left":"180px"},400);  
+    $(".sidebar").animate({"margin-left":"180px"},400,);
+}
+
+function hideSidebar(){
+    $(".sidebar").animate({"margin-left":"0px"},400,function(){
+        $(".sidebar").css("display","none");
+    });
+    $(".roleSelectorWrapper").animate({"margin-left":"0px"},400);
+    $(".dungeonSelectorWrapper").animate({"margin-left":"0px"},400);
+    $(".dungeonViewWrapper").animate({"margin-left":"0px"},400);
 }
 
 function showDungeonSelector() {

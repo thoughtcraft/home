@@ -75,6 +75,19 @@ function cacheCheck() {
     }, false);
 }
 
+function showSidebar(){
+    $(".sidebar").css("display","flex");
+    $(".mainWrapper").animate({"margin-left":"180px"},400);
+    $(".sidebar").animate({"margin-left":"180px"},400,);
+}
+
+function hideSidebar(){
+    $(".sidebar").animate({"margin-left":"0px"},400,function(){
+        $(".sidebar").css("display","none");
+    });
+    $(".mainWrapper").animate({"margin-left":"0px"},400);
+}
+
 function addButtonEvents() {
 
     //Handle Filter Selection
@@ -90,6 +103,13 @@ function addButtonEvents() {
     //Handle Search
     $('#search').on('mousedown',function(){
         search();
+    });
+
+    $(".sidebarButton").on("mousedown",function(){
+        showSidebar();
+    });
+    $(".sidebarClose").on("mousedown",function(){
+        hideSidebar();
     });
 }
 

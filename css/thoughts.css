@@ -1,0 +1,166 @@
+body{  
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    width:100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: "abtMain";
+    overflow: hidden;
+    background: var(--c3);
+}
+
+.mainWrapper{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "n1 hi1 hi1 n2"
+    "n1 hi1 hi1 n2"
+    "n3 n4 n4 n5"
+    "n3 n6 n6 n5";
+
+    max-height: 100%;
+
+    grid-gap: 2%;
+    padding: 2%;
+}
+
+.n1{grid-area: n1;background-color: var(--c5)}
+.n2{grid-area: n2;background-color: var(--c5)}
+.n3{grid-area: n3;background-color: var(--c6)}
+.n4{grid-area: n4;background-color: var(--c6)}
+.n5{grid-area: n5;background-color: var(--c6)}
+.n6{grid-area: n6;background-color: var(--c5)}
+
+.hi1{
+    grid-area: hi1;
+    background: url("../assets/thoughts/mplus/thoughts_mplus.png");
+    background-size: cover;
+}
+
+.main{
+    display: flex;  
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-end;
+}
+
+.background{
+    background-color: rgba(0,0,0,0.4);
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgWrapper{
+    align-self: stretch;
+}
+
+.cardImg{
+    width:100%;
+    height: 100%;
+}
+
+.horizontal{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.vertical{
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+.verticalWrapper{
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-shrink: 1;
+}
+
+.bodyWrapper{
+    flex-grow: 2;
+}
+
+.headersWrapper{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+h1,h2{
+    font-family: Oswald;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    font-size: 16px;
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+
+
+.light{
+    color: var(--h1);
+}
+.dark{
+    color: var(--c1);
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.linkNav{
+    width: 100%;
+}
+
+.linkNav.light{
+    border-top: solid 2px rgba(255,255,255,.2);
+}
+
+.linkNav.dark{
+    border-top: solid 2px rgba(0,0,0,.2);
+}
+
+.pL{
+    font-family: Oswald;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.pL.light:visited{
+    color: var(--h1);
+}
+
+.pL.dark:visited{
+    color: var(--c1);
+}
+
+.pL.dark:hover,.pL.light:hover{
+    color: var(--hi1);
+    cursor: pointer;
+}
+

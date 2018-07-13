@@ -48,6 +48,30 @@ function addMouseOvers(){
     $(".dR").on("mousedown",function(){
         returnToStrat();
     });
+
+    $(".sidebarButton").on("mousedown",function(){
+        showSidebar();
+    });
+    $(".sidebarClose").on("mousedown",function(){
+        hideSidebar();
+    });
+}
+
+function showSidebar(){
+    $(".sidebar").css("display","flex");
+    $(".abtWrapper").animate({"margin-left":"180px"},400);
+    $(".mechanicsTabWrapper").animate({"margin-left":"180px"},400);
+    $(".bossDescWrapper").animate({"margin-left":"180px"},400);
+    $(".sidebar").animate({"margin-left":"180px"},400,);
+}
+
+function hideSidebar(){
+    $(".sidebar").animate({"margin-left":"0px"},400,function(){
+        $(".sidebar").css("display","none");
+    });
+    $(".abtWrapper").animate({"margin-left":"0px"},400);
+    $(".mechanicsTabWrapper").animate({"margin-left":"0px"},400);
+    $(".bossDescWrapper").animate({"margin-left":"0px"},400);
 }
 
 function selectStrat(){

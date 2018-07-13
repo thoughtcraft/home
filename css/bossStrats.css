@@ -19,10 +19,8 @@ body{
     padding: 0;
     background: var(--c1);
     display: grid;
-    grid-template-columns: 1.2fr 8.8fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "sidebar abtMain";
-    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-areas: "abtMain";
 }
 
 p{
@@ -32,87 +30,10 @@ p{
     font-size: 18px;
 }
 
-/* shared sidebar */
-
-.sidebar{
-    grid-area: sidebar;
-    background: var(--c0);
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 5%;
-}
-
-.sidebarHeader{
-    margin: 10% 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidebarMain{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    flex-grow: 2;
-}
-
-.sidebarFooter{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-h1{
-    color: var(--h1);
-    font-family: Oswald;
-    font-weight: 700;
-    font-size: 1.5vw;
-    text-transform: uppercase;
-}
-
-h2,h3,h4{
-    color: var(--h1);
-    font-family: Oswald;
-    font-weight: 300;
-    font-size: 1.1vw;
-    border-top: solid 1px var(--hi1);
-    text-transform: uppercase;
-    padding: 0 0 10% 0;
-    margin: 0;
-    width: 100%;
-}
-
-h3{
-    font-size: .8vw;
-    margin-left: 10px;
-    border: none;
-    width: auto;
-}
-
-h4{
-    border: none;
-    font-size: .6vw;
-    color: var(--t1);
-}
-
-a{
-    color: var(--h1);
-    text-decoration: none;
-}
-
-a:hover{
-    color: var(--hi1);
-}
-
-.logo{
-    width: 50%;
-}
-
 /* ABT WRAPPER */
 
 .abtWrapper{
+    z-index: 1;
     grid-area: abtMain;
     display: grid; /*Change this for debug*/
     justify-items: center;
@@ -125,8 +46,6 @@ a:hover{
     ". . bc11 . .";
     grid-gap: 2%;
     padding: 3%;
-
-    max-height: 100%;
 
     background-image: url("../assets/back_bs.png");
     background-size: cover;
@@ -279,6 +198,11 @@ a:hover{
 }
 
 /* Boss strats */
+
+a{
+    color: var(--hi1);
+    text-decoration: underline;
+}
 
 .mh{
     font-size: 24px;
